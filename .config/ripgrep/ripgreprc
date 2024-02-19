@@ -1,0 +1,6 @@
+--hidden
+
+--glob=!git/*
+--glob=!.git/*
+
+--ignore-case

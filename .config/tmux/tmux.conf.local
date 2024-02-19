@@ -370,12 +370,11 @@ tmux_conf_copy_to_os_clipboard=false
 #set -g mode-keys vi
 
 # replace C-b by C-a instead of using both prefixes
-# set -gu prefix2
-# unbind C-a
-# unbind C-b
-# set -g prefix C-a
-# bind C-a send-prefix
-bind a send-prefix
+set -gu prefix2
+unbind C-a
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
 
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
@@ -385,6 +384,7 @@ bind a send-prefix
 
 bind p previous-window # select previous window
 bind n next-window # select next window
+bind a send-prefix # jump to begining of line
 
 
 # -- tpm -----------------------------------------------------------------------

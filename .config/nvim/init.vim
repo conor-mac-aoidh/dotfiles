@@ -16,6 +16,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Misc
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'backdround/global-note.nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 
 call plug#end()
 
