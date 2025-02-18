@@ -4,7 +4,9 @@
 # Whitelist specific directories and files
 !.gitignore
 !.zsh_common
+!.config
 !.config/nvim
 !.config/tmux
 !.config/fd
 !.config/ripgrep
+!.config/starship.toml
