@@ -2,11 +2,16 @@
 
 " Colorscheme
 set background=dark
-set termguicolors
-colorscheme vim-monokai-tasty
 
 " Sets how many lines of history VIM has to remember
 set history=500
+
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" Or if you have Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
 
 " Enable filetype plugins
 filetype plugin on

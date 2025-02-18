@@ -2,7 +2,7 @@
 ---> Treesitter
 ------------------------------
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "typescript", "javascript", "markdown", "json" },
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "typescript", "javascript", "markdown", "json", "python" },
   sync_install = false,
   auto_install = true,
   highlight = {
@@ -14,11 +14,13 @@ require'nvim-treesitter.configs'.setup {
 ---> Telescope
 ------------------------------
 local builtin = require('telescope.builtin')
+local utils = require('telescope.utils')
 vim.keymap.set('n', '<C-p>', builtin.find_files, {})
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>.', function() builtin.find_files({ cwd = vim.fn.expand('%:p:h') }) end)
 require('telescope').setup{
   defaults = {
     file_ignore_patterns = {
@@ -55,6 +57,18 @@ global_note.setup({
   directory = "./",
 })
 
-vim.keymap.set("n", "<leader>n", global_note.toggle_note, {
+vim.keymap.set("n", "<leader>gn", global_note.toggle_note, {
   desc = "Toggle note",
 })
+
+------------------------------
+---> nx.nvim
+------------------------------
+require("nx").setup {}
+
+------------------------------
+---> auto-session
+------------------------------
+require("auto-session").setup {
+  suppressed_dirs = { "~/", "~/Downloads", "/"},
+}
