@@ -1,0 +1,10 @@
+# Ignore everything by default
+*
+
+# Whitelist specific directories and files
+!.gitignore
+!.zsh_common
+!.config/nvim
+!.config/tmux
+!.config/fd
+!.config/ripgrep
