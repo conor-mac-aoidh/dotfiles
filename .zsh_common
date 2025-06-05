@@ -22,6 +22,7 @@ setopt inc_append_history    # Add commands to HISTFILE in order of execution
 setopt share_history         # Share command history data
 
 
+export GIT_EDITOR="nvim"
 export EDITOR="nvim"
 alias v="nvim"
 alias vim="nvim"
