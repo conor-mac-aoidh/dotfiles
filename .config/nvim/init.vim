@@ -27,19 +27,10 @@
 
 source ~/.config/nvim/basic.vim
 
-let g:coc_global_extensions = [
-  \ 'coc-json',
-  \ 'coc-tsserver',
-  \ 'coc-css',
-  \ 'coc-prettier',
-  \ 'coc-eslint',
-  \ 'coc-angular',
-  \ 'coc-yaml',
-  \ 'coc-tabnine'
-  \ ]
+lua require("kendo")
+lua require("angular-filetype")
 
 lua require("config.lazy")
 
 
-"source ~/.config/nvim/plugins_config.vim
-"lua require('plugins_config')
+
